@@ -18,7 +18,7 @@ mkdir -p "$WORK_DIR"
 cd "$WORK_DIR"
 
 # Download and extract kernel source
-echo "[1/5] Downloading kernel ${KERNEL_VERSION}..."
+echo "[1/5] Downloading kernel \e[31m${KERNEL_VERSION}...\n"
 sleep 1
 wget "$DOWNLOAD_URL"
 tar -xf "linux-${KERNEL_VERSION}.tar.xz"
@@ -38,10 +38,10 @@ scripts/config --enable NAMESPACES
 
 make olddefconfig
 
-echo "Kernel config size: $(wc -l < .config) lines"
+echo "Kernel config size: \e[33m$(wc -l < .config) lines\n"
 
 # Compile with maximum parallelism
-echo "[3/5] Compiling kernel (this takes a while)..."
+echo "[3/5] Compiling kernel \e[35m(this takes a while)...\n"
 sleep 1
 JOBS=$(nproc)
 make -j$JOBS LOCALVERSION=-mydistro
@@ -57,5 +57,5 @@ INSTALL_MOD_PATH="$ROOTFS" make modules_install
 cp arch/x86/boot/bzImage "$ROOTFS/boot/vmlinuz"
 
 echo ""
-echo "Done! Kernel at: $ROOTFS/boot/vmlinuz"
-echo "Modules at: $ROOTFS/lib/modules/${KERNEL_VERSION}-mydistro/"
+echo "Done! Kernel at: \e[31m$ROOTFS/boot/vmlinuz\n"
+echo "Modules at: \e[31m$ROOTFS/lib/modules/${KERNEL_VERSION}-mydistro/\n"
