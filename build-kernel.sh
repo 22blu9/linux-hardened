@@ -1,7 +1,7 @@
 #!/bin/bash
 # build-kernel.sh — Kernel compile for barebones GNU/Linux distro
 # Kernel: 7.1.5 (stable, July 2026)
-#these skids larpong fr fr
+#these skids larping fr fr
 set -euo pipefail
 
 WORK_DIR="$HOME/distro-kernel"
