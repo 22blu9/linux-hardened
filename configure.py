@@ -1,26 +1,10 @@
 #!/usr/bin/env python3
 """
-Arch Linux Installer TUI for Intel Macs using the T2 Security Chip
-
-Based on these guides:
-- Official Arch Linux wiki: https://wiki.archlinux.org/title/Installation_guide
-- The t2linux wiki: https://wiki.t2linux.org/distributions/arch/installation/
+Cubism Installer TUI for x86_64 PCs
 
 Features:
 1) Optional partition via TUI or skip-to-mount for manual setups.
 2) Interactive mount screen displaying partitions and letting you choose.
-3) Full T2-specific config with icon creation and other extras.
-
-Usage:
-  pacman -Sy archlinux-keyring
-  pacman -Sy python-textual
-  curl -o t2archinstall.py https://github.com/slsrepo/t2archinstall/raw/refs/heads/main/t2archinstall.py
-  chmod +x t2archinstall.py
-  ./t2archinstall.py
-If it doesn't work:
-    python3 -m venv ~
-    bin/pip install textual
-    bin/python t2archinstall.py
 """
 
 import sys
@@ -128,14 +112,14 @@ class T2ArchInstaller(App):
                 with TabbedContent(id="main_tabs"):
                     with TabPane("Start", id="start_tab"):
                         with VerticalScroll(id="start_scroll", can_focus=False):
-                            yield Static("Welcome to the T2 Arch Linux Installer!")
+                            yield Static("Welcome to the Cubism Installer!")
                             yield Static("")
                             yield Static("Start by entering the disk you want to use below, follow the steps and read the log on the right :)")
                             yield Static("")
                             yield Static("Target disk (e.g. /dev/nvme0n1 or /dev/sda):")
                             yield Input(placeholder="Enter disk path", id="disk_input")
-                            yield Static("Use 'Prepare Partitions' to create Linux partitions in the free space you set aside in macOS.")
-                            yield Static("Your macOS and other existing partitions will not be touched.")
+                            yield Static("Use 'Prepare Partitions' to create Linux partitions ")
+                            yield Static("Your existing partitions will not be touched.")
                             yield Static("")
                             yield Static("If you already prepared these Linux partitions, you can skip this step by choosing 'Mount Existing'.")
                             yield Static("")
