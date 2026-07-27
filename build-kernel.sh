@@ -1,7 +1,7 @@
 #!/bin/bash
 # build-kernel.sh — Kernel compile for barebones GNU/Linux distro
 # Kernel: 7.1.5 (stable, July 2026)
-
+#these skids larpong fr fr
 set -euo pipefail
 
 WORK_DIR="$HOME/distro-kernel"
@@ -19,12 +19,14 @@ cd "$WORK_DIR"
 
 # Download and extract kernel source
 echo "[1/5] Downloading kernel ${KERNEL_VERSION}..."
+sleep 1
 wget "$DOWNLOAD_URL"
 tar -xf "linux-${KERNEL_VERSION}.tar.xz"
 cd "linux-${KERNEL_VERSION}"
 
 # Configure kernel
 echo "[2/5] Configuring kernel..."
+sleep 1
 make defconfig
 
 scripts/config --disable RUST
@@ -40,6 +42,7 @@ echo "Kernel config size: $(wc -l < .config) lines"
 
 # Compile with maximum parallelism
 echo "[3/5] Compiling kernel (this takes a while)..."
+sleep 1
 JOBS=$(nproc)
 make -j$JOBS LOCALVERSION=-mydistro
 
@@ -49,6 +52,7 @@ make modules -j$JOBS
 
 # Install to rootfs
 echo "[5/5] Installing to rootfs..."
+sleep 1
 INSTALL_MOD_PATH="$ROOTFS" make modules_install
 cp arch/x86/boot/bzImage "$ROOTFS/boot/vmlinuz"
 
