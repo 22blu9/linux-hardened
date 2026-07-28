@@ -26,3 +26,6 @@ Cubism will use flatpak for graphical apps, a package manager to download CLI pa
 - Optional build our package manager.
 - Optional write our own window manager.
 - Optional write our own root
+
+#### Credits:
+`configure.py` copied and modified from https://github.com/slsrepo/t2archinstall/blob/main/t2archinstall.py
