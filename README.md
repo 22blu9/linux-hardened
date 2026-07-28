@@ -16,16 +16,17 @@ Cubism will use flatpak for graphical apps, a package manager to download CLI pa
 ### This project is still under heavy development, so these plans might be changed. For now, it is a project for tinkering and is insignificant.
 
 #### To-Do List:
-
-- [ ] get an installer.
-- [ ] figure out how to make it rootless
-- [ ] port it to arm chips.
-- [ ] have SELinux
+- [x] Get a kernel script
+- [x] Get a bootstrap script
+- [ ] Get an installer.
+- [ ] Figure out how to make it rootless
+- [ ] Port it to arm chips.
+- [ ] Use SELinux
 - [ ] Use and port halium to have some mobile compatibility.
-- [ ] Optional host mirrors of the iso's
-- [ ] Optional build our package manager.
-- [ ] Optional write our own window manager.
-- [ ] Optional write our own root
+- [ ] Optional, host mirrors of the iso's
+- [ ] Optional, build our package manager.
+- [ ] Optional, write our own window manager.
+- [ ] Optional, write our own root
 
 #### Credits:
 `configure.py` copied and modified from [here](https://github.com/slsrepo/t2archinstall/blob/main/t2archinstall.py)
