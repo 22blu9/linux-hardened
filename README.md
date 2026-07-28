@@ -15,7 +15,7 @@ Cubism will use flatpak for graphical apps, a package manager to download CLI pa
 
 ### This project is still under heavy development, so these plans might be changed. For now, it is a project for tinkering and is insignificant.
 
-####To-Do List:
+#### To-Do List:
 
 - get an installer.
 - figure out how to make it rootless
