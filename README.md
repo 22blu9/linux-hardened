@@ -15,4 +15,14 @@ Cubism will use flatpak for graphical apps, a package manager to download CLI pa
 
 ### This project is still under heavy development, so these plans might be changed. For now, it is a project for tinkering and is insignificant.
 
-Checklist:
+####To-Do List:
+
+- get an installer.
+- figure out how to make it rootless
+- port it to arm chips.
+- have SELinux
+- Use and port halium to have some mobile compatibility.
+- Optional host mirrors of the iso's
+- Optional build our package manager.
+- Optional write our own window manager.
+- Optional write our own root
