@@ -23,8 +23,9 @@ blockD will use flatpak for graphical apps, a package manager to download CLI pa
 - [x] Get a kernel script.
 - [x] Get a bootstrap script.
 - [ ] Get a package manager.
-- [ ] Get an installer.
-- [ ] Figure out how to make it rootless
+- [x] Get an installer.
+- [ ] Modify `configure.py` for Debian, then blockD
+- [ ] Figure out how to make it rootless.
 - [ ] Port it to arm chips.
 - [ ] Use SELinux.
 - [ ] Use and port halium to have some mobile compatibility.
