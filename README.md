@@ -1,4 +1,4 @@
-# **linux-hardened**
+# **blockD** #### (Pronounced "blocked")
 
 ![blockD logo](/artwork/IMG_1781.png)
 
