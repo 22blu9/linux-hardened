@@ -32,6 +32,8 @@ blockD will use flatpak for graphical apps, a package manager to download CLI pa
 - [ ] Optional, build our package manager.
 - [ ] Optional, write our own window manager.
 - [ ] Optional, write our own root.
+- [ ] Make a precompiled Release
+- [ ] Utilize Actions to compile weekly
 
 #### Credits:
 `configure.py` copied and modified from [here](https://github.com/slsrepo/t2archinstall/blob/main/t2archinstall.py).
