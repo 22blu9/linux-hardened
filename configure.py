@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Cubism Installer TUI for x86_64 PCs
+blockD Installer TUI for x86_64 PCs
 
 Features:
 1) Optional partition via TUI or skip-to-mount for manual setups.
@@ -23,8 +23,8 @@ from textual.app import App, ComposeResult
 from textual.containers import Horizontal, Vertical, VerticalScroll
 from textual.widgets import Button, Header, Footer, Static, Input, RichLog, TabbedContent, TabPane, RadioSet, RadioButton
 
-class T2ArchInstaller(App):
-    """Main application for T2 Arch Linux installer."""
+class blockD(App):
+    """Main application for the blockD installer."""
 
     CSS = """
     Screen {
@@ -106,13 +106,13 @@ class T2ArchInstaller(App):
         ]
 
     def compose(self) -> ComposeResult:
-        yield Header(icon="^", name="T2 Arch Linux Installer", show_clock=True)
+        yield Header(icon="^", name="blockD Installer", show_clock=True)
         with Horizontal():
             with Vertical(id="left_panel"):
                 with TabbedContent(id="main_tabs"):
                     with TabPane("Start", id="start_tab"):
                         with VerticalScroll(id="start_scroll", can_focus=False):
-                            yield Static("Welcome to the Cubism Installer!")
+                            yield Static("Welcome to the blockD Installer!")
                             yield Static("")
                             yield Static("Start by entering the disk you want to use below, follow the steps and read the log on the right :)")
                             yield Static("")
@@ -177,8 +177,8 @@ class T2ArchInstaller(App):
                     with TabPane("Setup", id="packages_tab"):
                         with VerticalScroll(id="packages_scroll", can_focus=False):
                             yield Static("Start the initial installation:")
-                            yield Button("Add the T2 Repository or Rerank Mirrors", id="add_repo_btn")
-                            yield Static("Install the base system and T2 packages")
+                            yield Button("Add the blockD or Rerank Mirrors", id="add_repo_btn")
+                            yield Static("Install the base system and blockD packages")
                             yield Button("Auto Install (in the app)", id="pacstrap_auto_btn")
                             yield Button("Manual Install (will exit the app)", id="pacstrap_manual_btn")
                             yield Static("Manual command:")
@@ -243,13 +243,13 @@ class T2ArchInstaller(App):
                             yield Static("T2 Suspend solutions:")
                             yield Button("Disable Suspend and Sleep", id="suspend_sleep_btn")
                             yield Button("Ignore Suspend when closing the lid", id="ignore_lid_btn")
-                            yield Button("Enable T2 Suspend Workaround Service", id="suspend_fix_btn")
-                            yield Button("Enable Extended T2 Suspend Workaround Service", id="extended_suspend_fix_btn")							
+                            yield Button("Enable Suspend Workaround Service", id="suspend_fix_btn")
+                            yield Button("Enable Extended Suspend Workaround Service", id="extended_suspend_fix_btn")							
 
                     with TabPane("Completion", id="completion_tab"):
                         with VerticalScroll(id="completion_scroll", can_focus=False):
                             yield Static("Installation Complete!")
-                            yield Static("Your Arch Linux T2 system has been successfully installed.")
+                            yield Static("Your blockD system has been successfully installed.")
                             yield Static("The system is now ready to boot.")
                             yield Static("Choose an option:")
                             yield Button("Unmount Only", id="unmount_btn")
