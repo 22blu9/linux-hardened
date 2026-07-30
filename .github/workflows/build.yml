@@ -1,12 +1,10 @@
 name: Build
 
 on:
-    push:
-   #   branches: [ "main" ]
-   # pull_request:
-   # workflow_dispatch:
-       tags:
-           - "run-test-build"
+  workflow_dispatch: {}
+
+  schedule:
+    - cron: "21 3 * * *"
 
 jobs:
   example-job:
@@ -31,10 +29,10 @@ jobs:
         run: ./build-kernel.sh
         
       - name: Allow exec on bootstrap
-        run: chmod +x base-bootstrap.sh
+        run: chmod +x bootstrap-base.sh
         
       - name: Make bootstrap
-        run: ./base-bootstrap.sh
+        run: ./bootstrap-base.sh
       
       - name: Allow exec on image build 
         run: chmod +x build-image-final.sh            
