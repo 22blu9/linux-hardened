@@ -1,9 +1,10 @@
 # **blockD** 
-![GitHub Repo stars](https://img.shields.io/github/stars/22blu9/linux-hardened?style=plastic)
-![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/22blu9/linux-hardened/total?style=plastic)
-![GitHub Release](https://img.shields.io/github/v/release/22blu9/linux-hardened?include_prereleases&sort=date&display_name=release&style=plastic)
-![GitHub Closed Pull Requests](https://img.shields.io/github/issues-pr-closed/22blu9/linux-hardened?style=plastic)
+![GitHub Repo stars](https://img.shields.io/github/stars/22blu9/linux-hardened?style=flat)
+![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/22blu9/linux-hardened/total?style=flat)
+![GitHub Release](https://img.shields.io/github/v/release/22blu9/linux-hardened?include_prereleases&sort=date&display_name=release&style=flat)
+![GitHub Closed Pull Requests](https://img.shields.io/github/issues-pr-closed/22blu9/linux-hardened?style=flat)
 ![GitHub top language](https://img.shields.io/github/languages/top/22blu9/linux-hardened)
+![GitHub language count](https://img.shields.io/github/languages/count/22blu9/linux-hardened?style=flat)
 
 #### (Pronounced "blocked")
 
