@@ -18,7 +18,7 @@ blockD will use flatpak for graphical apps, a package manager to download CLI pa
 #### How to make the system - **WORK IN PROGRESS**
 ##### Prerequisites
 - A GNU/Linux system, Debian-based is preferred.
-- These installed dependencies: `build-essential flex bison libssl-dev libelf-dev dwarves pahole rsync bc kmod cpio libncurses-dev wget`
+- These installed dependencies: `build-essential flex bison libssl-dev libelf-dev dwarves pahole rsync bc kmod cpio libncurses-dev wget debootstrap`
 
 1. Run build-kernel.sh and base-bootstrap.sh
 `./build-kernel.sh`
