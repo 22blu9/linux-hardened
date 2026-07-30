@@ -1,2 +1,12 @@
-#null file
-true
+# !/bin/bash
+jobs:
+  example-job:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./
+    steps:
+      - name: Build kernel
+        run: ./build-kernel.sh
+      - name: Make bootstrap
+        run: ./bootstrap-base.sh
