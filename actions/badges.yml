@@ -1,0 +1,2 @@
+- name: badge-generator
+  uses: ErnaneJ/badge-generator@1.2.2
