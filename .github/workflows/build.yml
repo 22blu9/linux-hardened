@@ -1,3 +1,11 @@
+name: Build
+
+on:
+    push:
+      branches: [ "main" ]
+    pull-request:
+    workflow_dispatch:
+
 jobs:
   example-job:
     runs-on: ubuntu-latest
