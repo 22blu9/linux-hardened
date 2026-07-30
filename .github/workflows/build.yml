@@ -5,8 +5,8 @@ on:
    #   branches: [ "main" ]
    # pull_request:
    # workflow_dispatch:
-   tags:
-       - "run-test-build"
+       tags:
+           - "run-test-build"
 
 jobs:
   example-job:
