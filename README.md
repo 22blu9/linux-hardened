@@ -34,7 +34,7 @@ blockD will use flatpak for graphical apps, a package manager to download CLI pa
 - [x] Get a bootstrap script.
 - [ ] Get a package manager.
 - [x] Get an installer.
-- [ ] Modify `configure.py` for Debian, then blockD
+- [ ] Modify `configure.py` for Trisquel Ecne, then blockD
 - [ ] Figure out how to make it rootless.
 - [ ] Port it to arm chips.
 - [ ] Use SELinux.
