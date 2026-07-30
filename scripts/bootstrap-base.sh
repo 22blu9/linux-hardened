@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 # build-rootfs.sh - Builds a glibc base system for systemd + pkgsrc
 
 set -euo pipefail
