@@ -4,9 +4,11 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./
+        working-directory: ./scripts/
     steps:
       - name: Build kernel
         run: ./build-kernel.sh
       - name: Make bootstrap
         run: ./bootstrap-base.sh
+      - name: Make image
+        run: ./build-image-final.sh
