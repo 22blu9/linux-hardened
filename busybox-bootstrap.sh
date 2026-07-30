@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 # bootstrap-busybox.sh — Updated to use separate rootfs location
 
 set -euo pipefail
