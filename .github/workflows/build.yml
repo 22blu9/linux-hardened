@@ -27,9 +27,15 @@ jobs:
 
       - name: Build kernel
         run: ./build-kernel.sh
-
+        
+      - name: Allow exec on bootstrap
+        run: chmod +x base-bootstrap.sh
+        
       - name: Make bootstrap
         run: ./base-bootstrap.sh
+      
+      - name: Allow exec on image build 
+        run: chmod +x build-image-final.sh            
 
       - name: Make image
         run: ./build-image-final.sh
