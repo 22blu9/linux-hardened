@@ -1,5 +1,6 @@
 # **blockD** 
 ![GitHub Repo stars](https://img.shields.io/github/stars/22blu9/linux-hardened?style=plastic&color=%23FF8000)
+![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/22blu9/linux-hardened/total?style=plastic&color=%23ff8000)
 
 #### (Pronounced "blocked")
 
