@@ -1,0 +1,11 @@
+# Example
+- name: Generate coverage badge
+  uses: ernanej/badge-generator@main
+  with:
+    name: '98.7%'
+    prefix: 'coverage'
+    icon: 'jest'
+    color: 'green'
+    style: 'flat-square'
+    path: 'badges/coverage.svg'
+    branch: 'badge'
