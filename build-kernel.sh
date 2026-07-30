@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 # build-kernel.sh
 
 set -euo pipefail
