@@ -43,3 +43,4 @@ blockD will use flatpak for graphical apps, a package manager to download CLI pa
 `configure.py` copied and modified from [here](https://github.com/slsrepo/t2archinstall/blob/main/t2archinstall.py).
 
 Thanks to @Provectus18 for helping a ton on this project.
+:octocat::octocat::octocat:
