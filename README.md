@@ -17,6 +17,9 @@ blockD will use flatpak for graphical apps, a package manager to download CLI pa
 `./build-kernel.sh`
 `./base-bootstrap.sh`
 
+2. Then, run build-image-final.sh
+`./build-image-final.sh`
+
 ### *This project is still under heavy development, so these plans might be changed. For now, it is a project for tinkering and is insignificant.*
 
 #### To-Do List:
