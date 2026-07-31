@@ -8,7 +8,7 @@
 
 #### (Pronounced "blocked")
 
-![blockD logo](/images/blockD-dark.png)
+[//]: # (![blockD logo](/images/blockD-dark.png) commented out)
 
 This will be a hardened Linux kernel for blockD, our own bloat-free and privacy-first operating system in this repo, with x86_64 support and with future aarch64 suppport. 
 
