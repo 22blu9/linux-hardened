@@ -31,8 +31,11 @@ jobs:
       - name: Allow exec on bootstrap
         run: chmod +x bootstrap-base.sh
         
-      - name: Make bootstrap
+      - name: Make bootstrap via script
         run: ./bootstrap-base.sh
+
+      - name: Bootstrap manual part
+        run: sudo chroot $ROOTFS /bin/bash; cd /root; wget https://cdn.netbsd.org/pub/pkgsrc/pkgsrc-2025Q1.tar.gz; tar -xzf pkgsrc-2025Q1.tar.gz; cd pkgsrc-2025Q1/bootstrap; ./bootstrap --prefix=/usr/pkg; export PATH=/usr/pkg/bin:/usr/pkg/sbin:\$PATH; echo 'export PATH=/usr/pkg/bin:/usr/pkg/sbin:\$PATH' >> /etc/profile; cd /root/pkgsrc-2025Q1/sysutils/systemd; bmake install; ln -sf /usr/pkg/lib/systemd/systemd /sbin/init; /usr/pkg/bin/systemctl enable systemd-journald; echo 'blockD' > /etc/hostname; exit
       
       - name: Allow exec on image build 
         run: chmod +x build-image-final.sh            
