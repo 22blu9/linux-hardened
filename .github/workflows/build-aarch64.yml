@@ -1,4 +1,44 @@
 name: Build-aarch664
 
 on:
-  
+  workflow_dispatch: {}
+
+  schedule:
+    - cron: "23 1 * * 0"
+
+jobs:
+  example-job:
+    runs-on: ubuntu-24.04-arm
+    defaults:
+      run:
+        working-directory: ./scripts-aarch64/
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install deps
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            build-essential flex bison libssl-dev libelf-dev dwarves pahole rsync bc kmod cpio libncurses-dev wget debootstrap
+
+      - name: Allow exec on kernel
+        run: chmod +x build-kernel-aarch64.sh 
+
+      - name: Build kernel
+        run: ./build-kernel-aarch64.sh
+        
+      - name: Allow exec on bootstrap
+        run: chmod +x bootstrap-base-aarch64.sh
+        
+      - name: Make bootstrap via script
+        run: ./bootstrap-base-aarch64.sh
+
+      - name: Bootstrap manual part
+        run: sudo chroot $ROOTFS /bin/bash; cd /root; wget https://cdn.netbsd.org/pub/pkgsrc/pkgsrc-2025Q1.tar.gz; tar -xzf pkgsrc-2025Q1.tar.gz; cd pkgsrc-2025Q1/bootstrap; ./bootstrap --prefix=/usr/pkg; export PATH=/usr/pkg/bin:/usr/pkg/sbin:\$PATH; echo 'export PATH=/usr/pkg/bin:/usr/pkg/sbin:\$PATH' >> /etc/profile; cd /root/pkgsrc-2025Q1/sysutils/systemd; bmake install; ln -sf /usr/pkg/lib/systemd/systemd /sbin/init; /usr/pkg/bin/systemctl enable systemd-journald; echo 'blockD' > /etc/hostname; exit
+      
+      - name: Allow exec on image build 
+        run: chmod +x build-image-final-aarch64.sh
+
+      - name: Exec image build
+        run: ./build-image-final-aarch64
