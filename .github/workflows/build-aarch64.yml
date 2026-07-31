@@ -1,4 +1,4 @@
-name: Build-aarch664
+name: Build AArch64
 
 on:
   workflow_dispatch: {}
