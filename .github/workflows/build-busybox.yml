@@ -4,7 +4,7 @@ on:
   workflow_dispatch: {}
 
   schedule:
-    # - cron: "21 3 * * 6"
+     - cron: "0 0 * * 3"
 
 jobs:
   example-job:
@@ -29,9 +29,9 @@ jobs:
         run: ./build-kernel.sh
         
       - name: Allow exec on bootstrap
-        run: chmod +x bootstrap-base.sh
+        run: chmod +x busybox-bootstrap.sh
         
       - name: Make bootstrap via script
-        run: ./bootstrap-base.sh
+        run: ./busybox-bootstrap.sh
 
-
+# This is it for now, we have to iron out any and all defects in the scripts.
