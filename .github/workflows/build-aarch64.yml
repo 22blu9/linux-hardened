@@ -16,15 +16,15 @@ jobs:
         
       - name: Checkout
         uses: actions/checkout@v4
-        
-      - name: Turn Ubuntu into Trisquel
-        run: ./.workflow-trisquel.sh
 
       - name: Install deps
         run: |
           sudo apt-get update
           sudo apt-get install -y \
             build-essential flex bison libssl-dev libelf-dev dwarves pahole rsync bc kmod cpio libncurses-dev wget debootstrap
+                    
+      - name: Turn Ubuntu into Trisquel
+        run: ./.workflow-trisquel.sh
 
       - name: Allow exec on kernel
         run: chmod +x build-kernel-aarch64.sh 
