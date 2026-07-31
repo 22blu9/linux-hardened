@@ -13,12 +13,12 @@ jobs:
       run:
         working-directory: ./scripts-aarch64/
     steps:
-
-      - name: Turn Ubuntu into Trisquel
-        run: ./.workflow-trisquel.sh
         
       - name: Checkout
         uses: actions/checkout@v4
+        
+      - name: Turn Ubuntu into Trisquel
+        run: ./.workflow-trisquel.sh
 
       - name: Install deps
         run: |
