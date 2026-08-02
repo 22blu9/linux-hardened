@@ -40,7 +40,7 @@ make modules -j$JOBS
 
 echo "[5/5] Installing to output..."
 INSTALL_MOD_PATH="$KERNEL_OUTPUT" make modules_install
-cp arch/x86/boot/bzImage "$KERNEL_OUTPUT/boot/vmlinuz"
+cp arch/arm64/boot/Image "$KERNEL_OUTPUT/boot/vmlinuz"
 
 echo ""
 echo "Done! Kernel at: $KERNEL_OUTPUT/boot/vmlinuz"
