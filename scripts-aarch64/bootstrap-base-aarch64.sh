@@ -9,9 +9,7 @@ KERNEL_OUTPUT="$HOME/distro-kernel-output"
 # 1. Wipe the old BusyBox rootfs and create a new one via Trisquel debootstrap
 echo "[1/6] Bootstrapping Trisquel Ecne base system (glibc + gcc + make)..."
 sudo rm -rf "$ROOTFS"
-sudo debootstrap --include=build-essential,curl,ca-certificates,file,git \
-    --variant=minbase \
-    ecne "$ROOTFS" http://archive.trisquel.info/trisquel/
+sudo debootstrap --include=build-essential,curl,ca-certificates,file,git --variant=minbase ecne "$ROOTFS" http://archive.trisquel.info/trisquel/
 
 # 2. Fix ownership so you can write to it without sudo later
 echo "[2/6] Fixing permissions..."
