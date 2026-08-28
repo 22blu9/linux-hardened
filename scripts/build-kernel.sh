@@ -5,7 +5,7 @@ set -euo pipefail
 
 WORK_DIR="$HOME/distro-kernel"
 KERNEL_OUTPUT="$HOME/distro-kernel-output"
-KERNEL_VERSION="7.1.5"
+KERNEL_VERSION="7.2.2"
 DOWNLOAD_URL="https://cdn.kernel.org/pub/linux/kernel/v7.x/linux-${KERNEL_VERSION}.tar.xz"
 
 # Create output directory first
