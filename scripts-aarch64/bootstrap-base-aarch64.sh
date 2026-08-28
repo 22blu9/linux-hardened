@@ -1,5 +1,10 @@
 #!/bin/bash
-# build-rootfs.sh - Builds a glibc base system for systemd + pkgsrc
+# build-rootfs.sh - Builds a glibc base system for runit + pkgsrc
+
+# ============
+# THIS NEEDS TO BE EDITED FOR BLOCKD TO BOOTSTRAPS ITSELF ONTO A NEW KERNEL!
+# THIS SCRIPT WILL NOT WORK!
+# ============ 
 
 set -euo pipefail
 
