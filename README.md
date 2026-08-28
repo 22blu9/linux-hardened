@@ -13,7 +13,7 @@
 This will be a hardened Linux kernel for blockD, our own bloat-free and privacy-first operating system in this repo, with x86_64 support and with future aarch64 suppport. 
 
 #### Plans for blockD
-blockD will use flatpak for graphical apps, a package manager to download CLI packages (Most likely going to be NetBSD's Pkgsrc), and is planned to have halium support for mobile devices. This will be straight from scratch and will most likely be a barebones GNU/Linux distro with zsh as a replacement for bash. It will be rootless, and all additional packages will not be tied to the base system in any way, making a smaller attack space. doas will replace sudo for security reasons, so yes, this will use runit, and utilize busybox.
+blockD will use flatpak for graphical apps, a package manager to download CLI packages (Most likely going to be NetBSD's Pkgsrc), and is planned to have halium support for mobile devices. This will be straight from scratch and will most likely be a barebones GNU/Linux distro with zsh as a replacement for bash. It will be rootless, and all additional packages will not be tied to the base system in any way, making a smaller attack space. doas will replace sudo for security reasons, so yes, this will use runit.
 
 #### How to make the system - **WORK IN PROGRESS**
 ##### Prerequisites
@@ -31,10 +31,10 @@ blockD will use flatpak for graphical apps, a package manager to download CLI pa
 
 #### To-Do List:
 - [x] Get a kernel script.
-- [x] Get a bootstrap script.
-- [ ] Get a package manager.
-- [x] Get an installer.
-- [ ] Modify `configure.py` for Trisquel Ecne, then blockD
+- [ ] Get a bootstrap script.
+- [x] Get a package manager, pkgsrc.
+- [ ] Get an installer.
+- [ ] Modify `configure.py` for blockD
 - [ ] Figure out how to make it rootless.
 - [ ] Port it to arm chips.
 - [ ] Use SELinux.
@@ -44,7 +44,6 @@ blockD will use flatpak for graphical apps, a package manager to download CLI pa
 - [ ] Optional, write our own window manager.
 - [ ] Optional, write our own root.
 - [ ] Make a precompiled Release
-- [ ] Utilize Actions to compile weekly
 
 #### Credits:
 `configure.py` copied and modified from [here](https://github.com/slsrepo/t2archinstall/blob/main/t2archinstall.py).
