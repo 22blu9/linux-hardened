@@ -20,11 +20,14 @@ blockD will use flatpak for graphical apps, a package manager to download CLI pa
 - A GNU/Linux system, Debian-based is preferred.
 - These installed dependencies: `build-essential flex bison libssl-dev libelf-dev dwarves pahole rsync bc kmod cpio libncurses-dev wget debootstrap`
 
-1. Run build-kernel.sh and base-bootstrap.sh
+1. Run build-kernel.sh.
 `./build-kernel.sh`
-`./base-bootstrap.sh`
 
-2. Then, run build-image-final.sh
+2. Download the rootfs [here](https://www.swisstransfer.com/dl/01a034dc-9d7b-7077-8c8a-c572274a14fb). There is also a prebuilt image there as well.
+
+3. Extract it.
+
+4. Then, run build-image-final.sh.
 `./build-image-final.sh`
 
 ### *This project is still under heavy development, so these plans might be changed. For now, it is a project for tinkering and is insignificant.*
