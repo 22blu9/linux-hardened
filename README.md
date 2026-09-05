@@ -34,7 +34,6 @@ blockD will use flatpak for graphical apps, a package manager to download CLI pa
 
 #### To-Do List:
 - [x] Get a kernel script.
-[//]:- [ ] Get a bootstrap script.
 - [x] Get a package manager, pkgsrc.
 - [ ] Get an installer.
 - [ ] Modify `configure.py` for blockD
